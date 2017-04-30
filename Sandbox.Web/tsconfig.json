@@ -1,0 +1,30 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": false,
+    "lib": [ "es2015", "dom" ],
+    "target": "es5",
+    "experimentalDecorators": true,
+    "typeRoots": [
+      "/node_modules/@types"
+    ],
+    "types": [
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot/lib",
+    "typings",
+    "obj",
+    "bin"
+  ],
+  "include": [
+    "scripts/**/*.ts"
+  ]
+}

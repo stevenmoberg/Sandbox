@@ -1,0 +1,41 @@
+﻿@model Sandbox.Web.Features.Account.Login
+@{
+    ViewData["Title"] = "Login";
+}
+<style>
+    .form-horizontal { padding: 20px 0; }
+    .form-horizontal .control-label { width: 150px; text-align:left; }
+    .form-horizontal .form-control { width: 200px; display:inline-block; }
+
+    .loginmodal-container {
+        border: 1px outset;
+        background-color: #eee;
+        text-align: center;
+        padding: 10px 20px;
+        width: 300px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .login-form .input-group { margin-bottom: 10px; }
+</style>
+
+
+<div class="loginmodal-container">
+    <h3>Login to Your Account</h3>
+    <br />
+    <form class="login-form" asp-controller="Home" asp-action="Login">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" asp-for="Username" class="form-control" placeholder="Username" />
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" asp-for="Password" class="form-control" placeholder="Password" />
+        </div>
+        <input type="submit" name="login" class="btn btn-primary form-control" value="Login">
+        <div class="login-help">
+            <a href="#">Register</a> - <a href="#">Forgot Password</a>
+        </div>
+    </form>
+</div>
+
